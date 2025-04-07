@@ -19,8 +19,8 @@ int main(){
         return 1;
     }
 
-    cout << "\nFILE OPENED SUCCESSFULLY\n" << endl;
-    cout << "ADDING FILE DATA TO VECTOR\n" << endl;
+    cout << "\nFile opened successfully..." << endl;
+    cout << "Adding file data to vector..." << endl;
 
     inFS >> population;
     while(!inFS.fail()){
@@ -28,12 +28,12 @@ int main(){
         inFS >> population;
     }
 
-    cout << "PRINTING FILE POPULATION DATA\n" << endl;
+    cout << "Printing chart data...\n" << endl;
     chart_output(data);
 
     inFS.close();
     if(!inFS.is_open())
-        cout << "\nFILE CLOSED SUCCESSFULLY\n" << endl;
+        cout << "\nFile closed successfully...\n" << endl;
 
     return 0;
 }
@@ -50,6 +50,7 @@ string get_chart_data(int pop){
 
 void chart_output(vector<int> &data){
 
+    cout << "PRAIRIEVILLE POPULATION GROWTH\n" << endl;
     cout << setw(5) << left << "YEAR" << "|" << " POPULATION" << endl;
     cout << setw(6) << right << setfill('-') << "+" << setw(21) << left << "" << setfill(' ') << endl;
 
