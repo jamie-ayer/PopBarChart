@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 
 using namespace std;
 
@@ -21,7 +20,7 @@ int main(){
     }
 
     cout << "\nFILE OPENED SUCCESSFULLY\n" << endl;
-    cout << "\nADDING FILE DATA TO VECTOR\n" << endl;
+    cout << "ADDING FILE DATA TO VECTOR\n" << endl;
 
     inFS >> population;
     while(!inFS.fail()){
@@ -29,7 +28,7 @@ int main(){
         inFS >> population;
     }
 
-    cout << "\nPRINTING FILE POPULATION DATA\n" << endl;
+    cout << "PRINTING FILE POPULATION DATA\n" << endl;
     chart_output(data);
 
     inFS.close();
